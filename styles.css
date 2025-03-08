@@ -1,6 +1,8 @@
+/* Ensure body doesn’t overflow */
 body {
     margin: 0;
     font-family: "Source Sans Pro", sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 header {
@@ -13,12 +15,13 @@ header img {
     height: 150px;
 }
 
+/* Default styles remain unchanged for desktop */
 .header-container {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Aligns logo and nav vertically */
+    align-items: center;
 }
 
 .nav-button {
@@ -109,8 +112,8 @@ ul li {
     justify-content: center;
     margin-top: 60px;
     padding: 0 10px;
-    width: 100%; /* Ensure it spans the full width */
-    overflow-x: auto; /* Allows horizontal scrolling if boxes exceed screen width */
+    width: 100%;
+    overflow-x: auto;
 }
 
 .box {
@@ -120,7 +123,7 @@ ul li {
     width: 300px;
     height: 250px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color:white; /* New bright blue color */
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,4 +157,50 @@ ul li {
 
 .box-button:hover {
     background-color: #004d8d; /* Darker blue on hover */
+}
+
+/* Mobile scaling function */
+@media (max-width: 768px) {
+    /* Scale the entire page content proportionally */
+    body {
+        transform: scale(0.8); /* Scales down to 80% of original size */
+        transform-origin: top left; /* Scales from top-left corner */
+        width: 125%; /* Compensates for scaling to fit content */
+        overflow-x: hidden; /* Prevents horizontal scroll */
+    }
+
+    /* Ensure the header and main content fit within the scaled viewport */
+    .header-container,
+    main {
+        max-width: 100%; /* Override fixed 1000px width */
+        padding: 0 5px; /* Reduce padding for tighter fit */
+    }
+
+    /* Adjust box container to avoid excessive horizontal scrolling */
+    .box-container {
+        overflow-x: auto; /* Keep scroll if needed */
+        transform: none; /* Prevent double scaling */
+    }
+
+    /* Optional: Reduce logo size slightly for better fit */
+    header img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further scaling for very small screens (e.g., phones) */
+    body {
+        transform: scale(0.65); /* Scales down to 65% */
+        width: 154%; /* Adjust width to compensate */
+    }
+
+    header img {
+        height: 100px; /* Further reduce logo size */
+    }
+
+    .nav-button {
+        padding: 6px 12px; /* Slightly smaller buttons */
+        font-size: 18px;
+    }
 }
