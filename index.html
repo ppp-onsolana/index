@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Business Loan Program</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="ppp-logo.png" alt="PPP Logo">
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-button"><strong>Buy</strong></a></li>
+                    <li><a href="#" class="nav-button" id="caButton"><strong>CA</strong></a></li>
+                    <li><a href="#" class="nav-button"><strong>X</strong></a></li>
+                    <li><a href="#" class="nav-button"><strong>T</strong></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <main>
+            <div class="content-container">
+                <h2 class="main-heading">Pyramid Ponzi Printor</h2>
+                <p class="subtitle">Earn USDC rewards every 6.9420 minutes just by holding $PPP tokens</p>
+                <h3>Why $PPP?</h3>
+                <ul>
+                    <li><strong>Automatic Payouts:</strong> Receive USDC every 6.9420 minutes autonomously.</li>
+                    <li><strong>Passive Income:</strong> Earn passive income by holding $PPP tokens.</li>
+                    <li><strong>Fair Launch:</strong> No team tokens, fair launch, deployer excluded from rewards.</li>
+                </ul>
+            <div class="box-container">
+                <div class="box">
+                    <h4>PPP Loan Forgiveness</h4>
+                    <p>Simply holding $PPP tokens will earn you passive income.</p>
+                    <a href="https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program/ppp-loan-forgiveness" class="box-button">Learn more about PPP loan forgiveness</a>
+                </div>
+                <div class="box">
+                    <h4>PPP Eligibility Criteria</h4>
+                    <p>Learn about the eligibility requirements for the Paycheck Protection Program (PPP).</p>
+                    <a href="https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program/ppp-lender-information" class="box-button">Check PPP eligibility</a>
+                </div>
+                <div class="box">
+                    <h4>PPP Application Process</h4>
+                    <p>Understand the steps to apply for a Paycheck Protection Program (PPP) loan.</p>
+                    <a href="https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program/ppp-data" class="box-button">Apply for a PPP loan</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>© サイファ ネオ 2025</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("caButton").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevents the link from navigating
+            const textToCopy = this.textContent; // Gets the text "CA"
+            navigator.clipboard.writeText(textToCopy) // Copies "CA" to clipboard
+                .then(() => {
+                    const originalText = this.textContent; // Save original text
+                    this.textContent = "Copied"; // Change to "Copied"
+                    setTimeout(() => {
+                        this.textContent = originalText; // Revert to "CA" after 2 seconds
+                    }, 2000); // 2000ms = 2 seconds
+                })
+                .catch(err => {
+                    console.error("Failed to copy: ", err);
+                });
+        });
+    </script>
+</body>
+</html>

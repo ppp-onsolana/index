@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+    background-color: white;
+    padding: 10px;
+    border-bottom: 1px solid #000000; /* Thinner black border */
+}
+
+header img {
+    height: 150px;
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns logo and nav vertically */
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: rgba(0, 183, 253, 1); /* New bright cyan-blue color */
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 20px;
+    border: 1px solid #004d8d;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 150, 220, 1); /* Slightly darker cyan-blue on hover */
+}
+
+h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* nav a {
+    color: #003087;
+    text-decoration: none;
+    font-size: 20px;
+} */
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+h2 {
+    color: #003087;
+    font-size: 32px;
+}
+
+h3 {
+    color: rgb(4,44,108);
+    font-size: 34px; /* Increased from 24px */
+    text-align: center; /* Explicitly centered */
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 60px;
+}
+
+.main-heading {
+    text-align: center;
+    color: rgb(4,44,108); /* Updated to teal */
+    font-size: 50px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 22px;
+    color: rgb(4,44,108); /* Updated to teal */
+}
+
+ul {
+    list-style-type: none; /* Optional: removes default bullets */
+    text-align: center; /* Centers the list block */
+    padding: 0; /* Removes default padding */
+}
+
+ul li {
+    color: rgb(4,44,108);
+    font-size: 24px;
+    text-align: center; /* Centers each list item text */
+    display: inline-block; /* Ensures items align horizontally if desired */
+    margin: 0 10px; /* Optional: adds spacing between items */
+}
+
+.box-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 60px;
+    padding: 0 10px;
+    width: 100%; /* Ensure it spans the full width */
+    overflow-x: auto; /* Allows horizontal scrolling if boxes exceed screen width */
+}
+
+.box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    height: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color:white; /* New bright blue color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box h4 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: rgb(4, 44, 108); /* Updated to dark blue */
+    text-align: center; /* Centers the title text */
+}
+
+.box p {
+    font-size: 14px;
+    margin: 0 0 10px;
+    color: rgb(4, 44, 108); /* Updated to dark blue */
+    text-align: center; /* Centers the title text */
+}
+
+.box-button {
+    display: inline-block;
+    background-color: rgba(0, 183, 253, 1);
+    color: white; /* Reverted to white for buttons */
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center; /* Centers the title text */
+}
+
+.box-button:hover {
+    background-color: #004d8d; /* Darker blue on hover */
+}
